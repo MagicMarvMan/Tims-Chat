@@ -83,8 +83,12 @@ class RoomPage extends \wcf\page\AbstractPage {
 	 */
 	public function readData() {
 		$sql = "SELECT 1";
+		
+		// get database from woltlab and prepare statement
 		$statement = WCF::getDB()->prepareStatement($sql);
 		$statement->execute();
+
+		// TODO: exception is currently only commented out
 		/*
 		if ($statement->fetchSingleColumn() !== 1) {
 			throw new NamedUserException('PHP must be configured to use the MySQLnd driver, instead of libmysqlclient.');
