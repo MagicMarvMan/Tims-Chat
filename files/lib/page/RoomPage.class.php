@@ -85,9 +85,11 @@ class RoomPage extends \wcf\page\AbstractPage {
 		$sql = "SELECT 1";
 		$statement = WCF::getDB()->prepareStatement($sql);
 		$statement->execute();
+		/*
 		if ($statement->fetchSingleColumn() !== 1) {
 			throw new NamedUserException('PHP must be configured to use the MySQLnd driver, instead of libmysqlclient.');
 		}
+		*/
 
 		parent::readData();
 
